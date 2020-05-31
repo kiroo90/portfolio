@@ -1,0 +1,128 @@
+:root {
+    --about: #0D3745;
+    --project: #B7D8DF;
+    --design: #C8D7D2;
+    --contact: #EAE8DC;
+    --fontDark: #333333;
+    --fontDark_02: #535353;
+    --undefined: #ddd;
+    --white: #F9F9F9;
+}
+
+/* 서브페이지 네비 숨김 */
+.main_nav_gnb.side {
+    position: fixed;
+    top: 0;
+    z-index: 20;
+    right: -100%;
+    transition: 1s;
+}
+
+.main_nav_gnb.side.on {
+    right: 0;
+}
+
+/* 첫 메인 페이지 */
+.main_nav_gnb {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main_nav_gnb > ul > li {
+    position: relative;
+}
+
+.main_nav_gnb > ul > li:nth-child(1) > a{
+    display: block;
+    height: 25vh;
+    background: var(--about);
+    color: var(--project);
+}
+
+.main_nav_gnb > ul > li:nth-child(2) > a{
+    display: block;
+    height: 25vh;
+    background: var(--project);
+    color: var(--about);
+}
+
+.main_nav_gnb > ul > li:nth-child(3) > a{
+    display: block;
+    height: 25vh;
+    background: var(--design);
+    color: var(--contact);
+    z-index: 1;
+}
+
+.main_nav_gnb > ul > li:nth-child(4) > a{
+    display: block;
+    height: 25vh;
+    background: var(--contact);
+    color: var(--design);
+    z-index: 2;
+}
+
+.main_nav_gnb > ul > li a {
+    font-size: 6.6rem;
+    font-weight: bold;
+    text-align: left;
+    padding-left: 4.5rem;
+    position: relative;
+}
+
+.main_nav_gnb > ul > li a > span {
+    position: absolute;
+    bottom: -1.2rem;
+}
+
+
+@media (min-width:900px) {
+    .main_nav_gnb > ul {
+        display: flex;
+    }
+
+    .main_nav_gnb > ul > li {
+        display: block;
+        width: 25%;
+    }
+
+    
+    .main_nav_gnb > ul > li:nth-child(1) > a{
+        width: 100%;
+        height: 100vh;
+    }
+
+    .main_nav_gnb > ul > li:nth-child(2) > a{
+        width: 100%;
+        height: 100vh;
+    }
+
+    .main_nav_gnb > ul > li:nth-child(3) > a{
+        width: 100%;
+        height: 100vh;
+    }
+
+    .main_nav_gnb > ul > li:nth-child(4) > a{
+        width: 100%;
+        height: 100vh;
+    }
+
+    .main_nav_gnb > ul > li a {
+        font-size: 16rem;
+        padding-left: 0;
+        writing-mode: vertical-rl;
+    }
+
+    .main_nav_gnb > ul > li a > span {
+        transform: rotate(180deg);
+        position: absolute;
+        right: -3rem;
+        bottom: 4.5rem;
+        transition: right 0.8s;
+    }
+
+    .main_nav_gnb > ul > li a:hover > span {
+        right: 3rem;
+    }
+}

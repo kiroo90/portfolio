@@ -1,0 +1,1366 @@
+:root {
+    --about: #0D3745;
+    --project: #B7D8DF;
+    --design: #C8D7D2;
+    --contact: #EAE8DC;
+    --fontDark: #333333;
+    --fontDark_02: #535353;
+    --undefined: #ddd;
+    --white: #F9F9F9;
+}
+
+.cf::before,
+.cf::after {
+    content: "";
+    display: table;
+}
+
+.cf::after {
+    clear: both;
+}
+
+.clip {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* about */
+figure {
+    font-size: 0 !important;
+}
+
+.about_wrap {
+    /* 애니메이션 */
+    width: 0;
+    height: 100vh;
+    background: var(--undefined); 
+    /* 색상 미정 정해야함 */
+    position: absolute;
+    z-index: -1;
+}
+
+header {
+    height: 10rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    position: relative;
+    /* 애니메이션 */
+    opacity: 0;
+}
+
+header h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Noto Sans KR', sans-serif;
+    line-height: 2.6rem;
+    margin-bottom: 2.6rem;
+    margin-right: 1.6rem;
+    letter-spacing: -0.1rem;
+    color: var(--fontDark);
+    position: relative;
+}
+
+header h1::after {
+    content: "";
+    width: 100%;
+    height: 0.6rem;
+    background: var(--undefined);
+    position: absolute;
+    bottom: -0.4rem;
+    left: 0;
+}
+
+header .section_nav .side_nav_btn {
+    font-size: 2.4rem;
+    position: absolute;
+    margin-bottom: 0.2rem;
+    padding: 1rem;
+    top: 3.8rem;
+    left: 0rem;
+    color: var(--fontDark);
+    cursor: pointer;
+    z-index: 30;
+    position: fixed;
+    background: transparent;
+    transition: 0.6s;
+}
+
+header .section_nav .side_nav_btn.on {
+    top: 0;
+    background: var(--undefined);
+}
+
+.xi-close {
+    color: #ffffff;
+}
+
+.xi-bars.none,
+.xi-close.none {
+    display: none;
+}
+
+.container.about {
+    overflow: hidden;
+}
+
+.container {
+    width: 92%;
+    margin: 0 4%;
+}
+
+.container .about_info {
+    position: relative;
+    /* 애니메이션 */
+    left: -50%;
+    opacity: 0;
+}
+
+.container .about_info .title {
+    padding-top: 3rem;
+    font-size: 4rem;
+    line-height: 5.6rem;
+    font-weight: bold;
+    
+}
+
+.container .about_info .title > span {
+    position: relative;
+    z-index: 0;
+}
+
+.container .about_info .title > span::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: 0.6rem;
+    left: 0;
+    width: 100%;
+    height: 2rem;
+    background: var(--undefined);
+    z-index: -1;
+}
+
+
+.container .about_info > h3 {
+    padding-top: 1rem;
+    font-size: 2.6rem;
+    font-weight: 500;
+    line-height: 3.4rem;
+    letter-spacing: -1.57025px;
+}
+
+.container .about_info .line {
+    width: 100%;
+    height: 1px;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    background: var(--undefined);
+    text-indent: -9999px;
+}
+
+.container .about_info > p {
+    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 2.6rem;
+    text-align: justify;
+    margin-bottom: 4rem;
+}
+
+.container .about_img {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: auto;
+    grid-template-areas: 
+    "img1 img2"
+    "img3 img2"
+    "img3 img4";
+    gap: 1.6rem;
+    width: 100%;
+    height: 100%;
+    font-size: 0;
+    /* 애니메이션 */
+    position: relative;
+    right: -60%;
+    opacity: 0;
+} 
+
+.container .about_img > img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.container .about_img > img:nth-child(1) {
+    grid-area: img1;
+}
+
+.container .about_img > img:nth-child(2) {
+    grid-area: img2;
+}
+
+.container .about_img > img:nth-child(3) {
+    grid-area: img3;
+}
+
+.container .about_img > img:nth-child(4) {
+    grid-area: img4;
+}
+
+/* about 종료*/
+
+/* project */
+
+.container_wrap {
+    opacity: 0;
+    position: relative;
+    bottom: -100rem;
+}
+.container_wrap.design {
+    bottom: 0rem;
+}
+
+.project_wrap {
+    /* 애니메이션 */
+    width: 0;
+    height: 100vh;
+    background: var(--project);
+    position: absolute;
+    z-index: -1;
+}
+
+
+.contact > .title, 
+.design > .title,
+.project > .title {
+    padding-top: 3rem;
+    font-size: 4rem;
+    line-height: 5.6rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.contact > .title > span,
+.design > .title > span,
+.project > .title > span {
+    position: relative;
+    z-index: 0;
+}
+
+.container > .title > span::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    bottom: 0rem;
+    left: 0;
+    width: 100%;
+    height: 2.6rem;
+    background: var(--undefined);
+    z-index: -1;
+}
+
+.mobile_title {
+    font-size: 2.6rem;
+    font-weight: bold;
+    margin-top: 6.8rem;
+    margin-bottom: 2rem;
+}
+
+.project .item {
+    width: 100%;
+    height: 70vh;
+}
+
+.img_bg {
+    text-indent: -9999px;
+    background: url(../img/project_vibe.jpg) center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.img_bg.mibs {
+    background: url(../img/project_mibs.jpg) center no-repeat;
+    background-size: cover;
+}
+
+/* 모바일일때 모달창으로 설명 */
+.project_info {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -104%;
+    z-index: 40;
+    transition: left 0.6s;
+}
+
+.project_info.on {
+    left: 0;
+}
+
+.project_info .margin {
+    width: 92%;
+    margin: 0 4%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.project_info .margin h2 {
+    font-size: 2.6rem;
+    font-weight: bold;
+    margin-top: 8rem;
+    margin-bottom: 2.6rem;
+    color: var(--fontDark);
+}
+
+.project_info .margin .title_p {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 2rem;
+    color: var(--fontDark_02);
+}
+
+.project_info .margin .color_box {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.project_info .margin .color_box ul {
+    display: flex;
+    margin-left: 0.4rem;
+}
+
+.project_info .margin .color_box ul li {
+    text-indent: -9999px;
+    width: 1.4rem;
+    height: 1.4rem;
+    margin-left: 0.6rem;
+    box-shadow: 0px 0.78px 1.56px rgba(0, 0, 0, 0.5);
+}
+
+/* 바이브 */
+.project_info .margin .color_box ul li:nth-child(1) {
+    background: #050402;
+}
+.project_info .margin .color_box ul li:nth-child(2) {
+    background: #0A0A0A;
+}
+.project_info .margin .color_box ul li:nth-child(3) {
+    background: #181818;
+}
+.project_info .margin .color_box ul li:nth-child(4) {
+    background: #FA3A54;
+}
+.project_info .margin .color_box ul li:nth-child(5) {
+    background: #F5F6FA;
+}
+.project_info .margin .color_box ul li:nth-child(6) {
+    background: #585858;
+}
+.project_info .margin .color_box ul li:nth-child(7) {
+    background: #898888;
+}
+.project_info .margin .color_box ul li:nth-child(8) {
+    background: #B1AFAF;
+}
+.project_info .margin .color_box ul li:nth-child(9) {
+    background: linear-gradient(96.56deg, #FD3A50 0%, #7F4BFC 100%);
+}
+
+/* 바이브 */
+
+/* MIBS */
+.project_info .margin .color_box ul li:nth-child(1) {
+    background: #333333;
+}
+.project_info .margin .color_box ul li:nth-child(2) {
+    background: #646464;
+}
+.project_info .margin .color_box ul li:nth-child(3) {
+    background: #035AA6;
+}
+.project_info .margin .color_box ul li:nth-child(4) {
+    background: #FCFCFC;
+}
+.project_info .margin .color_box ul li:nth-child(5) {
+    background: #FFFFFF;
+}
+/* MIBS */
+
+
+.project_info .margin .line {
+    width: 100%;
+    height: 1px;
+    background: var(--undefined);
+    text-indent: -9999px;
+}
+
+.project_info .margin > h3 {
+    margin-top: 2rem;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--fontDark);
+}
+
+.project_info .margin > p {
+    margin-top: 2rem;
+    font-size: 1.4rem;
+    font-weight: normal;
+    line-height: 2.1rem;
+    color: var(--fontDark_02);
+    text-align: justify;
+}
+
+.project_info .margin .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+    opacity: .99;
+}
+
+.btn {
+    margin-top: 10rem;
+    text-align: center;
+    line-height: 4.6rem;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+
+.btn > a {
+    display: inline-block;
+    width: 12rem;
+    height: 4.6rem;
+    background: var(--project);
+    border-radius: 2.4rem;
+    margin-left: 2rem;
+}
+
+.btn > a:nth-child(1) {
+    margin-left: 0;
+}
+
+.project_info .margin .close_modal {
+    position: absolute;
+    top: 2rem;
+    right: 4rem;
+    display: inline-block;
+    width: 4rem;
+    height: 4rem;
+    font-size: 3rem;
+    background: var(--undefined);
+    border-radius: 3rem;
+    text-align: center;
+    line-height: 4rem;
+}
+
+/* 모바일일때 모달창으로 설명 종료*/
+
+/* 프로젝트 메인 섹션 종료 */
+
+/* 커버 섹션 */
+.cover {
+    margin-top: 8rem;
+    font-size: 0;
+}
+
+.cover > .info {
+    width: 100%;
+    text-align: center;
+    position: relative;
+    background: var(--project);
+}
+
+.cover > .info > h2 {
+    font-size: 2.6rem;
+    font-weight: bold;
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+    color: var(--fontDark);
+}
+
+.cover > .info > p {
+    font-size: 2rem;
+    line-height: 3rem;
+    padding-bottom: 3rem;
+    color: var(--fontDark_02);
+}
+
+.cover > .info > .btn {
+    display: none;
+}
+
+.cover > .info > span {
+    position: absolute;
+    top: 0;
+    display: inline-block;
+    height: 0.5rem;
+    background: var(--project);
+}
+
+.cover > .info > .line_bg_top {
+    left: 0;
+    width: 40%;
+}
+
+.cover > .info > .line_bg_left {
+    left: 0;
+    height: 40%;
+    width: 0.5rem;
+}
+
+.cover > .info > .line_bg02_top {
+    right: 0;
+    width: 40%;
+}
+
+.cover > .info > .line_bg02_left {
+    right: 0;
+    height: 40%;
+    width: 0.5rem;
+}
+
+.cover > figure > a > img {
+    width: 100%;
+    object-fit: cover;
+}
+
+/* 커버 섹션 종료 */
+
+/* 수업 */
+.institute  {
+    margin-top: 6rem;
+}
+
+.institute > figure {
+    width: 100%;
+    height: 100%;
+}
+
+.institute > figure > a > img {
+    width: 48%;
+    height: 100%;
+    margin-right: 4%;
+    margin-bottom: 4%;
+    cursor: pointer;
+}
+
+.institute > figure > a:nth-child(2n) > img {
+    margin-right: 0;
+}
+/* 수업 종료 */
+
+/* 하단 배경 */
+.footer {
+    width: 100%;
+    height: 30vh;
+    background: var(--project);
+    margin-top: -10rem;
+}
+
+.container_wrap.design .footer {
+    background: var(--design);
+}
+
+/* project 종료*/
+
+/* design */
+.design_wrap {
+    /* 애니메이션 */
+    width: 0;
+    height: 100vh;
+    background: var(--design);
+    position: absolute;
+    z-index: -1;
+    transition: 1.2s;
+}
+
+.slide_container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    max-width: 135.4rem;
+    margin: 0 auto;
+    margin-top: 4rem;
+}
+
+.slide_item {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 0;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slide_item img {
+    width: 38rem;
+    margin: 0 1rem;
+    outline: none;
+}
+
+.slide_btn {
+    font-size: 3rem;
+    cursor: pointer;
+    margin: 0 2rem;
+}
+
+.btns {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 6rem;
+    text-align: center;
+}
+
+.btns > button {
+    width: 8rem;
+    height: 3.6rem;
+    outline: none;
+    border: 1px solid var(--undefined);
+    background: var(--undefined);
+    border-radius: 2.3rem;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.btns > button:nth-child(1) {
+    margin-left: 0;
+}
+
+.masonry_img {
+    margin: 0 auto;
+    margin-top: 3rem;
+    font-size: 0;
+}
+
+.masonry_img .item_box {
+    width: 100%;
+    max-width: 14rem;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 3rem;
+    border-radius: 2rem;
+    /* display: none; */
+}
+
+
+
+.masonry_img .item_box img {
+    width: 100%;
+    border-radius: 2rem;
+}
+
+
+.masonry_img .item_box .bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.masonry_img .item_box .view_more {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    font-size: 6rem;
+    color: var(--white);
+}
+
+.modal_img {
+    display: none;
+}
+
+.modal_img.on {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 40;
+    overflow-y: scroll;
+}
+
+.modal_img .bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.8;
+}
+
+.modal_img .view_more {
+    position: fixed;
+    top: 2%;
+    right: 0%;
+    font-size: 3rem;
+    color: var(--white);
+    z-index: 50;
+    transform: rotate(45deg);
+    padding: 1rem;
+    cursor: pointer;
+}
+
+.modal_img figure img {
+    width: 100%;
+    max-width: 25rem;
+    position: absolute;
+    top: 16%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 50;
+}
+/* design end */
+
+/* contact */
+.contact_wrap {
+    /* 애니메이션 */
+    width: 0;
+    height: 100vh;
+    background: var(--contact); 
+    /* 색상 미정 정해야함 */
+    position: absolute;
+    z-index: -1;
+    right: 0;
+}
+
+.section_container {
+    overflow: hidden;
+}
+
+.container.contact {
+    /* 애니메이션 */
+    position: relative;
+    left: -50%;
+    opacity: 0;
+    /* 애니메이션 */
+}
+
+.container.contact .about_me {
+    margin: 0 auto;
+    width: 26rem;
+    margin-top: 4rem;    
+}
+
+.about_me dl {
+    color: var(--fontDark);
+    padding-top: 3.4rem;
+}
+
+.about_me dt {  
+    float: left;
+    padding-right: 1.4rem;
+    font-size: 3.6rem;
+}
+
+.about_me dd {
+    margin: 0;
+    font-size: 1.6rem;
+    height: 4.4rem;
+    line-height: 3.2rem;
+}
+
+.mail_form {
+    /* 애니메이션 */
+    position: relative;
+    right: -50%;
+    opacity: 0;
+    /* 애니메이션 */
+    max-width: 50rem;
+    margin: 0 auto;
+    margin-top: 2rem;
+}
+
+.mail_form form {
+    width: 100%;
+}
+
+.form-elements {
+    width: 100%;
+}
+
+/* 인풋 포커스 */
+input::-webkit-input-placeholder {
+    color: rgb(156, 156, 156);
+    font-size: 1.4rem;
+}
+
+input::-moz-placeholder {
+    color: rgb(156, 156, 156);
+    font-size: 1.4rem;
+}
+
+input:-ms-input-placeholder {
+    color: rgb(156, 156, 156);
+    font-size: 1.4rem;
+}
+
+input::-ms-input-placeholder {
+    color: rgb(156, 156, 156);
+    font-size: 1.4rem;
+}
+
+input::placeholder {
+    color: rgb(156, 156, 156);
+    font-size: 1.4rem;
+}
+
+textarea::placeholder {
+    color: rgb(156, 156, 156);
+    font-size: 1.4rem;
+}
+
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+input:focus::-moz-placeholder {
+    color: transparent;
+}
+
+input:focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+input:focus::-ms-input-placeholder {
+    color: transparent;
+}
+
+input:focus::placeholder {
+    color: transparent;
+}
+
+textarea:focus::placeholder {
+    color: transparent;
+}
+
+/* 포커스 종료 */
+
+.mail_form form input{
+    display: block;
+    width: 96%;
+    height: 3.8rem;
+    background: var(--white);
+    border: 1px solid #D0D0D0;
+    outline: none;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+}
+
+.mail_form form input[type="email"],
+.mail_form form input[type="text"]{
+    padding-left: 4%;
+}
+
+#message {
+    border: 1px solid #D0D0D0;
+    background: var(--white);
+    outline: none;
+    width: 96%;
+    max-width: 50rem;
+    resize: none;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+}
+
+#message[type="text"] {
+    padding-top: 4%;
+    padding-left: 4%;
+}
+
+.button-success {
+    display:block;
+    width: 12rem;
+    height: 3.6rem;
+    margin-left: auto;
+    border: 1px solid var(--undefined);
+    background: var(--undefined);
+    border-radius: 1.2rem;
+}
+
+.thankyou_message {
+    display: block;
+    font-size: 2rem;
+    color: var(--fontDark_02);
+    font-weight: 500;
+    text-align: center;
+}
+
+.thankyou_message h2 span {
+    display: inline-block;
+    font-size: 2.6rem;
+    padding-bottom: 1rem;
+    font-weight: bold;
+    color: var(--fontDark);
+}
+
+
+/* @media */
+
+
+/* masonry media */
+@media (min-width:460px) {
+    .masonry_img .item_box {
+        max-width: 16rem;
+    }
+}
+
+@media (min-width:700px) {
+    .masonry_img .item_box {
+        max-width: 24rem;
+    }
+}
+
+@media (min-width:1000px) {
+    .masonry_img .item_box {
+        max-width: 32rem;
+    }
+}
+/* masonry media end*/
+
+
+@media (min-width:900px) {
+    /* project */
+    .container.project {
+        width: 100%;
+        max-width: 118rem;
+        margin: 0 auto;
+    }
+
+    .contact > .title {
+        padding-top: 10rem;
+        font-size: 7rem;
+        text-align: left;
+    }
+    .design > .title,
+    .project > .title {
+        padding-top: 10rem;
+        font-size: 7rem;
+    }
+
+    .mobile_title {
+        display: none;
+    }
+
+    .img_bg {
+        width: 58rem;
+        height: 84rem;
+    }
+    
+    .project .item {
+        height: 84rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        margin-top: 10rem;
+    }
+    
+    .project_info {
+        width: 50.8rem;
+        height: initial;
+        position: static;
+        z-index: 0;
+        margin: 7rem 3.6rem 8rem 5.6rem;
+    }
+
+    .project_info .margin {
+        width: 100%;
+        height: 69rem;
+        margin: 0;
+        overflow-y: hidden;
+        position: relative;
+    }
+
+    .project_info .margin .bg {
+        display: none;
+    }
+    
+    
+    .project_info .margin h2 {
+        font-size: 3.6rem;
+        margin-top: 0rem;
+        margin-bottom: 3rem;
+    }
+
+    .project_info .margin .title_p {
+        font-size: 1.6rem;
+        line-height: 2.6rem;
+    }
+
+    .project_info .margin .color_box {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .project_info .margin .color_box ul li {
+        width: 2rem;
+        height: 2rem;
+        margin-left: 1rem;
+    }
+
+    .project_info .margin > h3 {
+        margin-top: 3rem;
+        font-size: 1.8rem;
+    }
+
+    .project_info .margin > p {
+        margin-top: 2rem;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+    }
+
+    .btn {
+        display: flex;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .btn > a {
+        width: 16rem;
+        margin-left: 4rem;
+        cursor: pointer;
+        background: transparent;
+        transition: 0.3s;
+        border: 1px solid #333333;
+        box-sizing: border-box;
+    }
+
+    .btn > a:hover {
+        background: var(--project);
+        border: 1px solid var(--project);
+    }
+
+    .project_info .margin .close_modal {
+        display: none;
+    }
+
+    /* 메인 종료 */
+
+    /* 커버 섹션 */
+    
+    .container.cover {
+        width: 100%;
+        max-width: 118rem;
+        height: 33rem;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        margin-top: 23rem;
+    }
+
+    .container.cover.negative{
+        margin-top: -25rem !important;
+    }
+
+    .cover > .info {
+        max-width: 58rem;
+        height: 100%;
+        margin-top: 0;
+        margin-right: 2rem;
+        background: transparent;
+    }
+    
+    .cover > .info > h2 {
+        font-size: 3.6rem;
+    }
+    
+    .cover > figure > a > img {
+        width: 58rem;
+        height: 33rem;
+        object-fit: cover;
+        cursor: Default;
+    }
+
+    .cover_bg {
+        height: 43.2rem;
+        background: var(--project);
+        width: 40%;
+        margin-left: auto;
+        position: relative;
+        top: -381px;
+        z-index: -1;
+    }
+
+    .cover_bg.left {
+        margin-left: 0;
+    }
+    
+    .cover > .info > .btn {
+        display: flex;
+    }
+    /* 커버 섹션 종료 */
+
+    /* 수업 */
+    .institute {
+        margin-top: -28.1rem;
+    }  
+
+    .institute > figure {
+        width: 100%;
+        max-width: 118rem;
+        margin: 0 auto;
+        height: 100%;
+    }
+
+    .institute > figure > a {
+        width: 48%;
+        height: 30.4rem;
+        margin-right: 4%;
+        margin-bottom: 4%;
+        display: inline-block;
+        overflow: hidden;
+    }
+
+    .institute > figure > a > img {
+        width: 100%;
+        margin: 0;
+        transition: 0.4s;
+    }
+
+    .institute > figure > a:nth-child(2n) {
+        margin-right: 0;
+    }
+
+    .institute > figure > a > img:hover {
+        transform: scale(1.1);
+    }
+
+    /* 수업종료 */
+    
+    /* 하단배경 */
+    .footer {
+        height: 40vh;
+        margin-top: -20rem;
+    }    
+
+    /* project 종료 */
+    
+
+    /* design */
+    .slide_container {
+        margin-top: 10rem;
+    }
+
+    .slide_btn {
+        font-size: 5rem;
+    }
+
+    .btns {
+        margin-top: 16rem;
+    }
+
+    .btns button{
+        width: 12rem;
+        height: 4rem;
+        transition: 0.4s;
+    }
+
+    .btns button:hover {
+        border: 1px solid var(--undefined);
+        background: var(--undefined);
+    }
+
+    .masonry_img {
+        margin-top: 5rem;
+    }
+
+    .masonry_img .item_box {
+        overflow: hidden;
+    }
+    
+    .masonry_img .item_box .bg,
+    .masonry_img .item_box .view_more,
+    .masonry_img .item_box img {
+        transition: 0.4s;
+    }
+    
+    .masonry_img .item_box:hover img {
+        transform: scale(1.15);
+    }
+
+    .masonry_img .item_box:hover .bg {
+        opacity: 0.7;
+    }
+    
+    .masonry_img .item_box:hover .view_more{
+        opacity: 1;
+        font-size: 10rem;
+    }
+
+    
+    .modal_img figure img {
+        width: initial;
+        max-width: 70%;
+    }
+
+    .modal_img .view_more {
+        top: 10%;
+        right: 10%;
+        font-size: 5rem;
+        transform: rotate(0);
+        transition: transform 0.8s;
+    }
+
+    .modal_img .view_more:hover {
+        transform: rotate(-315deg);
+    }
+     /* design 종료*/
+
+     /* contact */
+     
+    .container.contact {
+        width: 100%;
+        max-width: 118rem;
+        margin: 0 auto;
+    }
+
+    .container.contact .about_me {
+        display: flex;
+        align-items: flex-end;
+        width: 100%;
+        max-width: 58rem;
+        margin-top: 10rem;
+        padding-left: 4rem;    
+    }
+
+    .about_me dl {
+        padding-left: 4rem;
+        padding-right: 3.2rem;
+        width: 100%;
+    }
+
+    .about_me dt {  
+        float: left;
+        padding-right: 1.4rem;
+        font-size: 3.6rem;
+    }
+
+    .about_me dd {
+        margin: 0;
+        font-size: 1.6rem;
+        height: 4.4rem;
+        line-height: 3.2rem;
+    }
+   
+    .mail_form {
+        max-width: 58rem;
+        margin-top: 4rem;
+    }
+
+    #message {
+        max-width: 58rem;
+    }
+
+    .button-success {
+        width: 16rem;
+        height: 4.6rem;
+        border-radius: 2rem;
+    }
+}
+
+@media (min-width:1100px) {
+    header {
+        align-items: flex-end;
+        justify-content: flex-start;
+    }
+
+    header h1 {
+        font-size: 2.6rem;
+        margin-bottom: 2.6rem;
+        margin-left: 24rem;
+    }
+
+    header h1::after {
+        position: absolute;
+        bottom: -0.8rem;
+        left: 0;
+    }
+
+    header .section_nav .side_nav_btn {
+        font-size: 3.6rem;
+        top: 3.4rem;
+        left: 10rem;
+    }
+    header .section_nav .side_nav_btn.on {
+        top: 1.4rem;
+        left: 8rem;
+    }
+    
+    .container.about {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        max-width: 155.4rem;
+        height: 100vh;
+        margin-right: 0;
+        margin-left: auto;
+        margin-top: -10rem;
+    }
+    
+    .container .about_info {
+        width: 100%;
+        max-width: 48.4rem;
+        margin-right: 12rem;
+        margin-left: 10rem;
+    }
+
+    .container .about_img {
+        position: relative;
+        top: 0rem;
+        max-width: 95rem;
+    }
+
+    .container .about_img > img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .slide_item {
+        width: 100%;
+        max-width: 118rem;
+    }
+
+    .section_container {
+        display: flex;
+        width: 100%;
+        max-width: 118rem;
+        margin: 0 auto;
+    }
+
+    .container.contact {
+        max-width: 58rem;
+    }
+
+    .container.contact .about_me {
+        padding-left: 0rem;    
+    }
+
+    .mail_form {
+        max-width: 50rem;
+        margin-top: 24.8rem;
+    }
+
+    #message {
+        max-width: 50rem;
+        height: 21rem;
+    }
+
+    .thankyou_message h2{
+        margin: 14rem;
+    }
+
+}
