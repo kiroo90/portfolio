@@ -35,7 +35,7 @@
 
 4. slick.js , masonry.js 사용
 
-5. constact 
+5. contact 
     *  google mail 적용
 
 
