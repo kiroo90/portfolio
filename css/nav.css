@@ -1,20 +1,30 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 :root {
-    --about: #0D3745;
-    --project: #B7D8DF;
-    --design: #C8D7D2;
-    --contact: #EAE8DC;
-    --fontDark: #333333;
-    --fontDark_02: #535353;
-    --undefined: #ddd;
-    --white: #F9F9F9;
+    --about: #F6C30B;
+    --project: #F2866E;
+    --design: #222222;
+    --contact: #22A4F5;
+    --fontDark: #111111;
+    --fontDark_02: #303030;
+    --fontDark_03: #606060;
+    --white: #FFFDF9;
+    --gray: #b1b1b1;
 }
 
 /* 서브페이지 네비 숨김 */
-.main_nav_gnb.side {
+ .main_nav_gnb.side {
     position: fixed;
     top: 0;
     z-index: 20;
     right: -100%;
+    -webkit-transition: 1s;
+    -o-transition: 1s;
     transition: 1s;
 }
 
@@ -23,7 +33,7 @@
 }
 
 /* 첫 메인 페이지 */
-.main_nav_gnb {
+ .main_nav_gnb {
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -44,7 +54,7 @@
     display: block;
     height: 25vh;
     background: var(--project);
-    color: var(--about);
+    color: var(--design);
 }
 
 .main_nav_gnb > ul > li:nth-child(3) > a{
@@ -59,7 +69,7 @@
     display: block;
     height: 25vh;
     background: var(--contact);
-    color: var(--design);
+    color: var(--about);
     z-index: 2;
 }
 
@@ -67,8 +77,9 @@
     font-size: 6.6rem;
     font-weight: bold;
     text-align: left;
-    padding-left: 4.5rem;
+    padding-left: 2rem;
     position: relative;
+    letter-spacing: -0.4rem;
 }
 
 .main_nav_gnb > ul > li a > span {
@@ -79,20 +90,25 @@
 
 @media (min-width:900px) {
     .main_nav_gnb > ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
 
     .main_nav_gnb > ul > li {
         display: block;
         width: 25%;
+        -webkit-transition: width 1.1s;
+        -o-transition: width 1.1s;
+        transition: width 1.1s;
     }
 
-    
+ 
     .main_nav_gnb > ul > li:nth-child(1) > a{
         width: 100%;
         height: 100vh;
     }
-
+ 
     .main_nav_gnb > ul > li:nth-child(2) > a{
         width: 100%;
         height: 100vh;
@@ -109,20 +125,34 @@
     }
 
     .main_nav_gnb > ul > li a {
-        font-size: 16rem;
+        font-size: 17rem;
         padding-left: 0;
-        writing-mode: vertical-rl;
     }
 
     .main_nav_gnb > ul > li a > span {
-        transform: rotate(180deg);
+        width: 17rem;
         position: absolute;
         right: -3rem;
         bottom: 4.5rem;
+        -webkit-transform: rotate(270deg);
+            -ms-transform: rotate(270deg);
+                transform: rotate(270deg);
+        -webkit-transition: right 0.8s;
+        -o-transition: right 0.8s;
         transition: right 0.8s;
     }
 
     .main_nav_gnb > ul > li a:hover > span {
-        right: 3rem;
+        right: 6rem;
+    }
+
+    .main_nav_gnb > ul > li:hover  {
+        width: 500px;
     }
 }
+
+@media (min-width:1400px) {
+    .main_nav_gnb > ul > li:hover  {
+        width: 900px;
+    }
+} 

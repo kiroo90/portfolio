@@ -1,40 +1,54 @@
 $(document).ready(()=>{
+    // 여러번 사용하는 class
+    const $about = $(".about_wrap");
+    const $project = $(".project_wrap");
+    const $design = $(".design_wrap");
+    const $contact = $(".contact_wrap");
+    const $header = $("header");
+    const $containerWrap = $(".container_wrap");
+    const $sideBtn = $(".side_nav_btn");
+    const $goTop = $(".go_top");
+
     // about start animate
-    $(".about_wrap").stop().animate({
-        width: "100%"
-    },1200, ()=>{
-        if($(window).width() > 1100) {
-            $(".about_wrap").stop().animate({
-                width: "70%"
-            }, 1000);
-        };
-        $("header").stop().animate({
-            top: "0",
-            opacity: "1"
-        }, 800, ()=>{
-            $(".about_info").stop().animate({
-                left: "0",
+    setTimeout( ()=>{
+        $about.stop().animate({
+            width: "100%"
+        },1200, ()=>{
+            if($(window).width() > 1100) {
+                $about.stop().animate({
+                    width: "70%"
+                }, 1000);
+            } else {
+                $about.stop().animate({
+                    height: "120vh"
+                }, 200);
+            }
+            $header.stop().animate({
+                top: "0",
                 opacity: "1"
-            }, 800);
-            $(".about figure").stop().animate({
-                right: "0",
-                opacity: "1"
-            }, 800);
+            }, 800, ()=>{
+                $(".about_info").stop().animate({
+                    left: "0",
+                    opacity: "1"
+                }, 800);
+                $(".about figure").addClass("on");
+            });
         });
-    });
+    }, 300);
+   
     // about start animate end
 
     // project start animate
-    $(".project_wrap").stop().animate({
+    $project.stop().animate({
         width: "100%"
     },1200, ()=>{
-        $(".project_wrap").stop().animate({
+        $project.stop().animate({
             height: "40rem"
         }, 800)
-        $("header").stop().animate({
+        $header.animate({
             opacity: "1"
         }, 800, ()=> {
-            $(".container_wrap").animate({
+            $containerWrap.animate({
                 opacity: "1",
                 bottom: "0"
             }, 1000)
@@ -43,17 +57,20 @@ $(document).ready(()=>{
     // project start animate end
 
     // design start animate
-    $(".design_wrap").stop().animate({
+    $design.stop().animate({
         width: "100%"
     },1200, ()=>{
+        $(".title span").addClass("color");
+        $sideBtn.addClass("color");
+        $("header h1").addClass("color");
         setTimeout(()=>{
-            $(".design_wrap").stop().animate({
-                height: "50vh"
+            $design.stop().animate({
+                height: "400px"
             }, 800)
-            $("header").stop().animate({
+            $header.animate({
                 opacity: "1"
             }, 800, ()=> {
-                $(".container_wrap").animate({
+                $containerWrap.animate({
                     opacity: "1"
                 }, 1000)
             });
@@ -62,15 +79,22 @@ $(document).ready(()=>{
     });
     // design start animate end
 
-    $(".contact_wrap").stop().animate({
+    $contact.stop().animate({
         width: "100%"
     },1200, ()=>{
         if($(window).width() > 1100) {
-            $(".contact_wrap").stop().animate({
-                width: "76%"
+            $contact.stop().animate({
+                width: "70%"
+            }, 1000);
+            $(".contect_bg").stop().animate({
+                left: "0%"
+            }, 1009);
+        } else {
+            $contact.stop().animate({
+                height: "50vh"
             }, 1000);
         }
-        $("header").stop().animate({
+        $header.stop().animate({
             top: "0",
             opacity: "1"
         }, 800, ()=>{
@@ -123,18 +147,18 @@ $(document).ready(()=>{
         $(window).on("scroll", ()=>{
             let scroll = $(window).scrollTop();
             if(scroll > 100) {
-                $(".side_nav_btn").addClass("on");
+                $sideBtn.addClass("on");
             } else {
-                $(".side_nav_btn").removeClass("on");
+                $sideBtn.removeClass("on");
             };
         });
     } else {
         $(window).on("scroll", ()=>{
             let scroll = $(window).scrollTop();
             if(scroll > 100) {
-                $(".side_nav_btn").addClass("on");
+                $sideBtn.addClass("on");
             } else {
-                $(".side_nav_btn").removeClass("on");
+                $sideBtn.removeClass("on");
             };
         });
     };
@@ -154,5 +178,23 @@ $(document).ready(()=>{
             }
         }); 
      } 
+    //  gotop
+    $(window).on("scroll", ()=>{
+        let scroll = $(window).scrollTop();
+        if(scroll > 800) {
+            $goTop.fadeIn();
+        } else {
+            $goTop.fadeOut();
+        };
+    });
+   
+    $goTop.on('click', ()=>{
+       $('html, body').animate({
+           scrollTop: 0
+         }, 500)
+     })
+
+     //  gotop end
+     console.log("앱")
 });
 

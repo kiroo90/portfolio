@@ -63,6 +63,7 @@ footer, header, hgroup, menu, nav, section {
 body {
     font-family: 'Noto Sans KR', sans-serif;
     line-height: 1;
+    background: #FFFDF9;
 }
 
 ol, ul {

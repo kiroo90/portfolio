@@ -1,5 +1,6 @@
-$(()=>{
-    setTimeout(()=>{
+// 이미지 로드를 위해서 on.load사용
+
+$(window).on("load", ()=>{
         $('.slide_item').slick({
             infinite: true,
             slidesToShow: 3,
@@ -24,6 +25,5 @@ $(()=>{
                 }
             ]
         });
-    },400)
-   
+   console.log("슬라이드")
 })

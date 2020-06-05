@@ -1,6 +1,8 @@
-$(document).ready(()=>{
+// 이미지 로드를 위해서 on.load사용
 
-    // design img rendam
+$(window).on("load",()=>{
+
+    // // design img rendam
     const listLength = $(".item_box").length;
 
     $(listLength).each(()=>{
@@ -13,7 +15,7 @@ $(document).ready(()=>{
             return temp-temp2;
         }).appendTo('.masonry_img');
     });
-    // design img rendam end
+    // // design img rendam end
 
     // masonry media
    function masonryMedia() {
@@ -47,12 +49,9 @@ $(document).ready(()=>{
            });
        };
    };
-
-   // 이미지가 겹치는 걸 막기위해서 셋타임아웃으로 시간차를 둠
-       setTimeout(()=>{
-           masonryMedia();
-       },500);
-   // 리사이즈 시에도 셋타임 아웃으로 시간차를둠
+   masonryMedia();
+   console.log("로드");
+     
        $(window).resize(()=>{
            setTimeout(()=>{
                masonryMedia();
@@ -68,10 +67,10 @@ $(document).ready(()=>{
       var category = e.currentTarget.dataset.id;
       
       if (category === "all") {
-        item.fadeIn();
-        masonryMedia();
+          item.fadeIn();
+          masonryMedia();
       } else {
-        item.hide().filter("[data-item = " + category + "]").fadeIn();
+        item.hide().filter("[data-item = " + category + "]").fadeIn(300);
         masonryMedia();
     }
     });
