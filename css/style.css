@@ -202,12 +202,13 @@ header .section_nav .side_nav_btn.on {
     height: 100%;
     position: relative;
     right: -60%;
-    opacity: 1;
+    opacity: 0;
     transition: 0.8s;
 } 
 
 .container .about_img.on {
-    right: 0;
+    right: 0%;
+    opacity: 1;
 }
 
 .container .about_img > img {
