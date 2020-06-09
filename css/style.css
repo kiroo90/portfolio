@@ -462,7 +462,7 @@ header .section_nav .side_nav_btn.on {
     font-size: 1.2rem;
     font-weight: 400;
     margin-top: 8rem;
-    margin-bottom: 1rem;
+    margin-bottom: 6rem;
 }
 
 .btn > a {
@@ -1211,12 +1211,14 @@ textarea:focus::placeholder {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
+        margin-bottom: 1rem;
         position: absolute;
         bottom: 0;
         left: 50%;
         -webkit-transform: translateX(-50%);
             -ms-transform: translateX(-50%);
                 transform: translateX(-50%);
+        
     }
 
     .btn > a {
