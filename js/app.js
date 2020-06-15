@@ -135,6 +135,7 @@ $(document).ready(()=>{
     });
 
     $(".jsClose").on('click', ()=>{
+        $(".modal_img").scrollTop(1);
         $(".modal_img").removeClass("on");
         $("body").css({
             overflowY: "scroll"

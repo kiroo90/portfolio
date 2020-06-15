@@ -371,6 +371,14 @@ header .section_nav .side_nav_btn.on {
             box-shadow: 0px 0.78px 1.56px rgba(0, 0, 0, 0.5);
 }
 
+.project_info .language {
+    width: 100%;
+    margin-top: 1rem;
+    text-align: right;
+    font-size: 1.4rem;
+    color: var(--project);
+}
+
 /* 바이브 */
 .project_info .margin .color_box ul li:nth-child(1) {
     background: #050402;
@@ -514,14 +522,14 @@ header .section_nav .side_nav_btn.on {
     font-size: 2.6rem;
     font-weight: bold;
     padding-top: 5rem;
-    padding-bottom: 3rem;
+    margin-bottom: 3rem;
     color: var(--fontDark);
 }
 
-.cover > .info > p {
+.cover > .info > div {
+    padding-bottom: 3rem;
     font-size: 1.6rem;
     line-height: 2.4rem;
-    padding-bottom: 3rem;
     color: var(--fontDark_02);
 }
 
@@ -744,6 +752,7 @@ header .section_nav .side_nav_btn.on {
 
 .modal_img {
     display: none;
+    overflow-y: hidden;
 }
 
 .modal_img.on {
