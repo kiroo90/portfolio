@@ -44,4 +44,6 @@
 
 1. 애니메이션 성능향상 (해결)
 
-2. masonry scroll event...
+2. masonry scroll event...(해결)
+
+3. favicon 추가, cover 완료

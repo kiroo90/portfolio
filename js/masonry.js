@@ -60,6 +60,15 @@ $(window).on("load",()=>{
 
     // masonry media end
 
+    //scrollReveal
+    ScrollReveal().reveal('.item_box' , {
+        origin: "top",
+        duration: 800,
+        distance: "25rem",
+        delay: 100,
+    });
+    //scrollReveal end
+
    // masonry filter
     const btns = $(".btns button");
     const item = $(".item_box");
@@ -67,9 +76,11 @@ $(window).on("load",()=>{
       var category = e.currentTarget.dataset.id;
       
       if (category === "all") {
-          item.fadeIn();
-          masonryMedia();
+        ScrollReveal().clean(".item_box"); 
+        item.fadeIn();
+        masonryMedia();
       } else {
+        ScrollReveal().clean(".item_box"); 
         item.hide().filter("[data-item = " + category + "]").fadeIn(300);
         masonryMedia();
     }
