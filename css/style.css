@@ -577,29 +577,6 @@ header .section_nav .side_nav_btn.on {
 
 /* 커버 섹션 종료 */
 
-/* 수업 */
-.institute  {
-    margin-top: 6rem;
-}
-
-.institute > figure {
-    width: 100%;
-    height: 100%;
-}
-
-.institute > figure > a > img {
-    width: 48%;
-    height: 100%;
-    margin-right: 4%;
-    margin-bottom: 4%;
-    cursor: pointer;
-}
-
-.institute > figure > a:nth-child(2n) > img {
-    margin-right: 0;
-}
-/* 수업 종료 */
-
 /* top버튼 */
 .go_top {
     display: none;
@@ -1322,47 +1299,6 @@ textarea:focus::placeholder {
         margin-bottom: 2.4rem;
     }
     /* 커버 섹션 종료 */
-
-    /* 수업 */
-    .institute {
-        margin-top: -28.1rem;
-    }  
-
-    .institute > figure {
-        width: 100%;
-        max-width: 118rem;
-        margin: 0 auto;
-        height: 100%;
-    }
-
-    .institute > figure > a {
-        width: 48%;
-        height: 30.4rem;
-        margin-right: 4%;
-        margin-bottom: 4%;
-        display: inline-block;
-        overflow: hidden;
-    }
-
-    .institute > figure > a > img {
-        width: 100%;
-        margin: 0;
-        -webkit-transition: 0.4s;
-        -o-transition: 0.4s;
-        transition: 0.4s;
-    }
-
-    .institute > figure > a:nth-child(2n) {
-        margin-right: 0;
-    }
-
-    .institute > figure > a > img:hover {
-        -webkit-transform: scale(1.1);
-            -ms-transform: scale(1.1);
-                transform: scale(1.1);
-    }
-
-    /* 수업종료 */
     
     .go_top {
         bottom: 4rem;
