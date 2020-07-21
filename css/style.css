@@ -344,6 +344,12 @@ header .section_nav .side_nav_btn.on {
     color: var(--fontDark);
 }
 
+.term {
+    /* margin-left: 1rem; */
+    font-size: 1.6rem;
+    color: var(--fontDark_03);
+}
+
 .project_info .margin .title_p {
     font-size: 1.4rem;
     font-weight: 400;
